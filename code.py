@@ -18,3 +18,7 @@ for line in f:
 	if len(line) < 140:
     		twitter.update_status(status=line)
         	time.sleep(3)
+
+
+#need to find out how to tokenize text
+# http://emerging.commons.gc.cuny.edu/2013/10/making-twitter-bot-python-tutorial/
