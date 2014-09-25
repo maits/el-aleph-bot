@@ -10,7 +10,7 @@ ACCESS_TOKEN_SECRET = 'XXXXXXXXXXXXX'
 twitter = Twython(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 
-filename=open('helloworld.txt', 'r')
+filename=open('hello-world.txt', 'r')
 f=filename.readlines()
 filename.close()
 
