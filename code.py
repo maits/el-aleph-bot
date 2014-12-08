@@ -3,22 +3,21 @@ from twython import Twython
 import time
 
 API_KEY = 'XXXXXXXXXXXXXXXX'
-API_SECRET = 'XXXXXXXXXXXXX'
-ACCESS_TOKEN = 'XXXXXXXXXXXXX'
-ACCESS_TOKEN_SECRET = 'XXXXXXXXXXXXX'
+API_SECRET = 'XXXXXXXXXXXXXXXX'
+ACCESS_TOKEN = 'XXXXXXXXXXXXXXXX'
+ACCESS_TOKEN_SECRET = 'XXXXXXXXXXXXXXXX'
 
 twitter = Twython(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
+#twitter.update_status(status= "")
 
-filename=open('hello-world.txt', 'r')
+filename=open('lines.txt', 'r')
 f=filename.readlines()
 filename.close()
 
 for line in f:
-	if len(line) < 140:
-    		twitter.update_status(status=line)
-        	time.sleep(3)
+    twitter.update_status(status=line)
+    time.sleep(1)
 
+print "DONE!"
 
-#need to find out how to tokenize text
-# http://emerging.commons.gc.cuny.edu/2013/10/making-twitter-bot-python-tutorial/
